@@ -48,7 +48,20 @@ router.put("/:resourceid", function(req, res) {
 
 
 router.delete("/:resourceid", function (req, res) {
+    for (var i = 0; i < global.resource.length; i++) {
+        if (global.resource[i].id === parseInt(req.params.resourceid, 10)) {
+            global.resource.splice(i, 1);
+            return res.json({
+                messsage: "success",
+                error: false
+            });
+        }
+    }
 
+    return res.status(404).json({
+        messsage: "resource not found",
+        error: true
+    });
 });
 
 router.get("/:resourceid", function (req, res) {

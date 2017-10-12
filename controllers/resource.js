@@ -28,18 +28,18 @@ router.post("/", function (req, res) {
     });
 });
 
-router.put("/:resourceid", function (req, res) {
+router.put("/:resourceid", function(req, res) {
     for (var i = 0; i < global.resource.length; i++) {
-        if (global.users[i].id === parseInt(req.params.resourceid, 10)) {
-            global.resource[i].image = re.body.image;
-            global.resource[i].name = re.body.name;
+        if (global.resource[i].id === parseInt(req.params.resourceid, 10)) {
+            global.resource[i].image = req.body.image;
+            global.resource[i].name = req.body.name;
             return res.json({
                 messsage: "success",
                 error: false
             });
         }
     }
-    return res.status(404)({
+    return res.status(404).json({
         messsage: "resource not found",
         error: true
     });
@@ -49,6 +49,23 @@ router.put("/:resourceid", function (req, res) {
 
 router.delete("/:resourceid", function (req, res) {
 
+});
+
+router.get("/:resourceid", function (req, res) {
+    for (var i = 0; i < global.resource.length; i++) {
+        if (global.resource[i].id === parseInt(req.params.resourceid, 10)) {
+            return res.json({
+                resource: global.resource[i],
+                messsage: "success",
+                error: false
+            });
+        }
+    }
+
+    return res.status(404).json({
+        messsage: "resource not found",
+        error: true
+    });
 });
 
 module.exports = router;

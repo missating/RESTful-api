@@ -1,0 +1,20 @@
+{
+  "name": "students-resource",
+  "version": "1.0.0",
+  "description": "A web app for basic school information system",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/missating/students-resource.git"
+  },
+  "author": "Vanessa Ating",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/missating/students-resource/issues"
+  },
+  "homepage": "https://github.com/missating/students-resource#readme"
+}

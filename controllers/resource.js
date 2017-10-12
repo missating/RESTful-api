@@ -16,4 +16,19 @@ router.get("/", function(req, res){
     });
 });
 
+router.post("/", function(req, res){
+    if(!req.body.name){
+        return res.json({
+            messsage: "resource name is required",
+            error: true
+        });
+    }
+    global.resource.push(req.body);
+        return res.json({
+            messsage: "success",
+            error: false
+        });
+});
+
+
 module.exports = router;

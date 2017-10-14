@@ -1,7 +1,7 @@
 # students-resource
 
-npm install to get all dependencies
+<code>npm install</code> to get all dependencies
 
-node serve.js to run
+<code>node server.js</code> to get the server up and running
 
 open postman and test all routes

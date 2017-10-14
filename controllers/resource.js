@@ -5,13 +5,23 @@ global.resource = [{
     id: 1,
     image: "https://nessaating.files.wordpress.com/2015/04/wpid-img-20150416-wa0001.jpg",
     name: "Books"
-}];
+},
+{
+    id: 2,
+    image: "https://nessaating.files.wordpress.com/2015/04/wpid-img-20150416-wa0001.jpg",
+    name: "Drawing paper"
+},
+
+{
+    id: 3,
+    image: "https://nessaating.files.wordpress.com/2015/01/wpid-words-turn-pictures.jpg",
+    name: "Pencils"
+}
+
+];
 
 router.get("/", function (req, res) {
-    return res.json({
-        resource: global.resource,
-        error: false
-    });
+     res.render("index");
 });
 
 router.post("/", function (req, res) {

@@ -1,0 +1,8 @@
+<h2 > All students resource here </h2>
+
+
+<% for(var i = 0; i < global.resource.length; i++) { %>
+<% var obj = global.resource[i]; %>
+<img src="<%= obj.image %>">
+<p> <%= obj.name; %> </p>
+<% } %>

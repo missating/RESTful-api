@@ -1,4 +1,8 @@
-# students-resource
+# Restful-api
+
+This is an exmaple of how to structure you folder to work with api. It contains dummy data for testing of the different api route.
+
+To run after cloning:
 
 <code>npm install</code> to get all dependencies
 

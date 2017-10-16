@@ -1,6 +1,6 @@
 # Restful-api
 
-This is an exmaple of how to structure folders in express (node.js) to work build your own api. It contains dummy data for testing of the different api route.
+This is an exmaple of how to structure folders in express (node.js) to build your own api. It contains dummy data for testing of the different api route.
 
 To run after cloning:
 
